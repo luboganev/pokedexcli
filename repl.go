@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 func cleanInput(text string) []string {
-	return []string{}
+	return strings.Fields(strings.ToLower(text))
 }
