@@ -79,8 +79,13 @@ func getCommands(cfg *config, params []string) map[string]cliCommand {
 		},
 		"explore": {
 			name:        "explore",
-			description: "Get a list of all the pokemons in the input area. Area name or id is a parameter.",
+			description: "Get a list of all the pokemons in the input area. Area name or id is a required parameter.",
 			callback:    commandExplore,
+		},
+		"catch": {
+			name:        "catch",
+			description: "Attempts to catch a pokemon. The name of the pokemon is a required parameter.",
+			callback:    commandCatch,
 		},
 	}
 }
