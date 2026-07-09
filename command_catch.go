@@ -25,7 +25,7 @@ func commandCatch(cfg *config, params []string) error {
 	catchThreshold := float64(0.75)
 	fmt.Printf("Catching attempt -> %.2f\n", catchSuccessRate)
 	if catchSuccessRate > catchThreshold {
-		fmt.Println("Got them! Congratulations!")
+		fmt.Println("Got them! Congratulations! You may now inspect it with the inspect command.")
 		cfg.caughtPokemon[pokemonName] = pokemon
 	} else {
 		fmt.Printf("%s got away! Good luck next time!\n", pokemonName)
